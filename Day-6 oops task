@@ -1,0 +1,28 @@
+1. 
+
+class Movie {
+    constructor(title= '', studio = '', rating = 'PG') {
+       this.title = title;
+       this.studio = studio;
+       this.rating = rating;
+    }
+ 
+    getPG(movies = [], rating = '') {
+       return movies.filter((m) => m.rating === rating);
+    }
+}
+const casionRoyaleMovie = new Movie('Casino Royale', 'Eon Productions', 'PG13');
+const Ayali = new Movie('Ayali', 'ZEE5', 'PG');
+const sitaRamam = new Movie('sitaRamam', 'Reddy', 'PG12');
+const IronMan3 = new Movie('IronMan3', 'Marvel', 'PG13');
+const Thor = new Movie('Thor', 'Marvel', 'PG15');
+const loki = new Movie('loki', 'Marvel', 'R');
+const AntMan = new Movie('AntMan', 'Marvel', 'R');
+ 
+const moviesArray = [casionRoyaleMovie, Ayali, sitaRamam, IronMan3, Thor, loki, AntMan];
+ 
+console.log(loki.getPG(moviesArray, 'R'));
+console.log(casionRoyaleMovie.getPG(moviesArray, 'PG'));
+
+
+ 
