@@ -1,4 +1,5 @@
-1. 
+1. Movie
+-------------
 
 class Movie {
     constructor(title= '', studio = '', rating = 'PG') {
@@ -24,5 +25,95 @@ const moviesArray = [casionRoyaleMovie, Ayali, sitaRamam, IronMan3, Thor, loki, 
 console.log(loki.getPG(moviesArray, 'R'));
 console.log(casionRoyaleMovie.getPG(moviesArray, 'PG'));
 
+-------------------------------------------------------------------------------------------------------------------------------------------
 
+3. Person with all details
+---------------------------
+
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+ 
+  class person{
+      constructor()
+      {
+          this.name='priya';
+          this.age=22;
+          this.address='chennai';
+          this.ph_no=1234567890;
+          this.qualification='IT';
+          this.destination='web designer';
+      }
+  }
+  var p =new person();
+  console.log(p.name);
+  console.log(p.qualification);
+  console.log(p.destination);
+  
+});
+
+
+
+4. Uber price
+----------------
+
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  class uberprice{
+      constructor(destination, price)
+      {   this.price=price;
+          this.kilometer=1;
+          this.destination=destination;
+          
+      }
+      ammount()
+       {
+           if(this.price)
+           {
+            return this.kilometer * this.price;   
+           }
+            throw new Error('please enter valid kilometer')
+          
+      }
+      setkilometer(k)
+      {
+          this.kilometer=k;
+      }
+      
+  }
+
+  var car = new uberprice('chennai',20); 
+  var AC_car = new uberprice('Bangalore',30);
+ 
+ 
+car.setkilometer(507)
+AC_car.setkilometer(445)
+console.log(car.ammount());
+console.log(AC_car.ammount());
+
+  //end-here
+});
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
  
